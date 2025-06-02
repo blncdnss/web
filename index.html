@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+ Menu
+</title>
+	<style>
+        /* Estilo solo para el contenedor del reloj */
+        .contenedor-reloj {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #reloj {
+            font-size: 28px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #222;
+            padding: 20px;
+            background-color: #ffffff;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body background="fon5.png">
+  <blockquote>
+      <IMG src="LOGO.png" width="1211" height="122"/>
+	<div class="contenedor-reloj">
+      <div id="reloj">
+	   Cargando...
+	  </div>
+     </div>
+	  <script>
+    function actualizarReloj() {
+        const ahora = new Date();
+
+        const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                       'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+        const diaSemana = dias[ahora.getDay()];
+        const dia = ahora.getDate();
+        const mes = meses[ahora.getMonth()];
+        const año = ahora.getFullYear();
+
+        let horas = ahora.getHours();
+        let minutos = ahora.getMinutes();
+        let segundos = ahora.getSeconds();
+        let ampm = horas >= 12 ? 'PM' : 'AM';
+
+        horas = horas % 12;
+        horas = horas ? horas : 12;
+
+        horas = horas < 10 ? '0' + horas : horas;
+        minutos = minutos < 10 ? '0' + minutos : minutos;
+        segundos = segundos < 10 ? '0' + segundos : segundos;
+
+        const fechaTexto =`${diaSemana}, ${dia} de ${mes} de ${año}`
+        const horaTexto =`${horas}:${minutos}:${segundos} ${ampm}`
+
+        document.getElementById('reloj').innerHTML =`${fechaTexto}<br>${horaTexto}`
+    }
+
+    setInterval(actualizarReloj, 1000);
+    actualizarReloj();
+      </script>
+	<BR/>
+	  <BR/>
+ <font face="Lucida Sans Unicode, Lucida Grande, sans-serif">
+  <B>
+  Modulo 5. 
+  </B>
+  PRODUCE ELEMENTOS WEB Y DESARROLLA PROYECTOS GRÁFICOS.
+    <BR />
+   <B>
+   Submodulo 1. 
+   </B>
+  PRODUCE ELEMENTOS WEB Y SOCIAL MULTIMEDIA.
+  </font>
+	<P>
+	 <audio controls="controls">
+	   <source src="uno.mp3" type="audio/mp3">
+      </audio>
+	</P>
+ <CENTER>
+   <FONT face="Showcard Gothic">
+     <H1>
+       Página web "Mi localidad"
+     </H1>
+   </FONT>
+ </CENTER>
+    <FONT face="Lucida Sans Unicode, Lucida Grande, sans-serif" size="4">
+      <B>
+     Presenta:
+      </B>
+    Blanca Denisse Marcelino Camilo
+    </FONT>
+  <font face="Century Gothic" size="4">
+        <ul>
+	     <li> 
+		  <a href="HISTORIA.html">
+	       Historia
+		  </a>
+		   de Novara
+		 </li>
+		  <li>
+		    <a  href="ANTES Y DESPUES.html">
+            Antes y después
+             </a>
+             de Novara
+		  </li>
+		    <li>
+		     <a href="GASTRONOMIA.html">
+	          Gastronomía
+		     </a>
+		      de Novara
+		    </li>
+          <li>
+            <a href="RECETAS.html">
+             Recetas
+            </a>
+            de  Novara
+            </li>
+          <li>
+            <a href="TURISMO.html">
+             Lugares turísticos 
+            </a>
+            de Novara
+           </li>
+        </ul>
+	   </font>
+	   <BR/>
+	<center>
+	   <video source src="Vid.mp4" controls WIDTH="488" HEIGHT="348">
+	   </video>
+    </center>
+	   <BR/>
+	     <BR/>
+	 <font face="Century Gothic" size="4">
+	   Para saber que me visitaste<a href="mailto:mrclncml@gmail.com">
+        ¡Mandame un correo!
+       </a>
+		  <BR/>
+	    <BR/>
+	  <a href="https://www.hitwebcounter.com" target="_blank">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=20820550&style=0027&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />
+	  </a>
+		 <CENTER>
+		     <a href="https://www.google.com" target="_blank">
+			    <img src="GOOGLE.png" width="297" height="174" align="middle"/>
+	         </a>
+		 </CENTER>
+        </font>
+	  <center>
+		  
+		  </blockquote>
+</body>
+</html>
